@@ -30,7 +30,7 @@ dtime = "2016-01-18"
 order = 0
 
 # 乘客名
-pa = u"黄佳楠(常用联系人)"
+pa = u"黄XX(常用联系人)"
 
 # 车次类型
 ttype="GC-高铁/城际"
@@ -106,17 +106,17 @@ def check():
                             b.find_by_text(pa)[1].click()
                                                         
                     else:
-                        b.execute_script('alert("似乎没有可预订选项")')
+                        b.execute_script('alert("没有可预订选项")')
                         b.get_alert().dismiss()
                         pass
                      
         b.execute_script('alert("能做的都做了")')
         b.get_alert().dismiss()
         
-        print(u"能做的都做了.....不再对浏览器进行任何操作")
+        print(u"脚本运行结束")
         
     except Exception:
-        print(u"出错了....")
+        print(u"出错！")
 
 if __name__ == "__main__":
     check()
